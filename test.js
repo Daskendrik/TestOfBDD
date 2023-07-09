@@ -24,6 +24,16 @@ describe("pow", function() {
             makeTest(x)
         }
     });
+    describe("возврат отрицательных в виде NaN", function(){
+        it("возводим в отрицательную степень и получаем NaN", function(){
+            assert.isNaN(pow(2,-1))
+        })
+    })
+    describe("возврат дробных в виде NaN", function(){
+        it("возводим в дробную степень и получаем NaN",function(){
+            assert.isNaN(pow(2,-1.5))
+        })
+    })
 
 
     // it("возводит в степень n", function() {
@@ -33,3 +43,15 @@ describe("pow", function() {
     //    assert.equal(pow(3, 3), 27); 
     // })
 });
+// describe("тест", function() {
+
+//     before(() => alert("Тестирование началось – перед тестами"));
+//     after(() => alert("Тестирование закончилось – после всех тестов"));
+  
+//     beforeEach(() => alert("Перед тестом – начинаем выполнять тест"));
+//     afterEach(() => alert("После теста – заканчиваем выполнение теста"));
+  
+//     it('тест 1', () => alert(1));
+//     it('тест 2', () => alert(2));
+  
+//   })

@@ -21,11 +21,11 @@
   <script>
     function pow(x, n) {
         let result = 1;
-
+        if(n < 0) return NaN;
+        if(Math.round(n) != n) return NaN; 
         for (let i = 0; i < n; i++) {
         result *= x;
         }
-
         return result;
     }
   </script>
@@ -39,7 +39,12 @@
   <div style="padding-left: 50px;padding-bottom: 0px;">
     <h1>Справка</h1>
     <p><b>Mocha</b> – основной фреймворк. Он предоставляет общие функции тестирования, такие как describe и it, а также функцию запуска тестов.</p>
-    <p><b>Chai</b> – библиотека, предоставляющая множество функций проверки утверждений.</p>
+    <p><b>Chai</b> – библиотека, предоставляющая множество функций проверки утверждений.<br>
+      assert.equal(value1, value2) – проверяет равенство value1 == value2.<br>
+      assert.strictEqual(value1, value2) – проверяет строгое равенство value1 === value2.<br>
+      assert.notEqual, assert.notStrictEqual – проверяет неравенство и строгое неравенство соответственно.<br>
+      assert.isTrue(value) – проверяет, что value === true<br>
+      assert.isFalse(value) – проверяет, что value === false</p>
     <p><b>Sinon</b> – библиотека, позволяющая наблюдать за функциями, эмулировать встроенные функции и многое другое.</p>
   </div>
   <script>
